@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+   id="indexfilter-random"
+   name="Random Index Filter"
+   version="1.0.0"
+   provider-name="iamedu">
+
+   <runtime>
+      <library name="random-indexfilter-1.0-SNAPSHOT.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="nutch-extensionpoints"/>
+   </requires>
+
+   <extension id="com.iamedu.nutch.indexer.indexfilter-random"
+              name="Random Index Filter"
+              point="org.apache.nutch.indexer.IndexingFilter">
+      <implementation id="RandomIndexFilter"
+                      class="com.iamedu.nutch.indexer.RandomIndexFilter"/>
+   </extension>
+
+</plugin>
